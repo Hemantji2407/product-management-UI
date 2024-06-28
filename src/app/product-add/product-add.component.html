@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="mb-0">Add Product</h2>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" formControlName="name" class="form-control" />
+            <div *ngIf="productForm.get('name')?.touched && productForm.get('name')?.invalid" class="text-danger">
+              Name is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" id="price" formControlName="price" class="form-control" />
+            <div *ngIf="productForm.get('price')?.touched && productForm.get('price')?.invalid" class="text-danger">
+              Price must be a positive number.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" formControlName="quantity" class="form-control" />
+            <div *ngIf="productForm.get('quantity')?.touched && productForm.get('quantity')?.invalid" class="text-danger">
+              Quantity must be at least 1.
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">Add Product</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

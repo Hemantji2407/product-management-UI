@@ -1,0 +1,26 @@
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .table thead th {
+    cursor: pointer;
+  }
+  
+  .table thead th:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .btn-warning {
+    margin-right: 5px;
+  }
+  
